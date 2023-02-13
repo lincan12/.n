@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Program Hitung Ipk UBSI</title>
+</head>
+<body>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<section class="get-in-touch">
+    <h2 class="title">Jumlah POIN SKS</h2>
+    <div class="contact-form row">
+        <div class="form-field col-lg-12">
+            <input id="name" class="input-text js-input" type="text" required>
+            <label class="label" for="name">Nama Lengkap</label>
+        </div>
+        <div class="form-field col-lg-12 ">
+            <input id="matkul" class="input-text js-input" type="text" required>
+            <label class="label" for="sks">Jumlah Mata Kuliah</label>
+        </div>
+        <div class="form-field col-lg-12 ">
+            <input id="sks" class="input-text js-input" type="text" required>
+            <label class="label" for="sks">Jumlah SKS Per Matakuliah</label>
+        </div>
+        <div class="form-field col-lg-12">
+            <!-- <input id="message" class="input-text js-input" type="text" required> -->
+            <label class="label" for="message" id="labelPoin">Jumlah Poin Anda :</label>
+        </div>
+        <div class="form-field col-lg-8">
+            <label class="label2" for="message" id="labelPoin2"></label>
+        </div>
+        <div class="form-field col-lg-12">
+            <input class="submit-btn" type="submit" value="Submit" onclick="poins()">
+        </div>
+        
+    </div>
+
+
+
+    <div clas="wrapper" id="wrapper">
+        <section class="get-in-touch">
+            <h2 class="title">Jumlah SKS</h2>
+            <section class="contact-form row">
+            <div class="form-field col-lg-12 ">
+                <input id="poinn" class="input-text js-input" type="text" >
+                <label class="label" for="phone">Jumlah Keseluruhan POIN</label>
+            </div>
+            <div class="form-field col-lg-12 ">
+                <input id="skss" class="input-text js-input" type="text" >
+                <label class="label" for="phone">Jumlah SKS</label>
+            </div>
+            <div class="form-field col-lg-12">
+                <label class="label" for="message" id="labelSks">Jumlah SKS Anda : </label>
+            </div>
+            <div class="form-field col-lg-8">
+                <label class="label2" for="message" id="labelSks2"></label>
+            </div>
+            <div class="form-field col-lg-12">
+                <input class="submit-btn" type="submit" value="Submit" onclick="sksssy()">
+            </div>
+            <div class="form-field col-lg-12">
+                <label class="label" for="message">
+                Jumlah SKS = Tambahkan Semua  Sks Dari Setiap Matakuliah </label>
+            </div>
+    </div>
+    </section>
+        
+    </form>
+</section>
+</body>
+<script type="application/javascript">
+    // hitung poin
+    matkul=document.getElementById('matkul');
+    sks=sks.getElementById('sks')
+    // labelPoin=document.getElementById('labelPoin')
+
+    // hitung sks
+    // let skss=document.getElementById('skss');
+    // let poinn=document.getElementById('poinn');
+    // let labelSks=document.getElementById('labelSks')
+    // let wrapper=document.getElementById('wrapper')
+
+    wrapper.style.display='none'
+function poins(){
+    matkul=document.getElementById("matkul").value;
+    sks=document.getElementById("sks").value;
+    labelPoin2=matkul*sks
+    console.log(labelPoin)
+    var poinnya=document.getElementById("labelPoin2")
+    poinnya.innerHTML=labelPoin2
+    alert("Selamat Jumlah Poin Anda",labelPoin2)
+}
+function sksssy(){
+    poinn=document.getElementById("poinn").value;
+    skss=document.getElementById("skss").value;
+    labelSks2=poinn/skss
+    console.log(labelSks2)
+    var sksnya=document.getElementById("labelSks2")
+    sksnya.innerHTML=labelSks2
+    alert("Selamat Jumlah SKS Anda",sksnya)
+
+}
+</script>
+</html>
